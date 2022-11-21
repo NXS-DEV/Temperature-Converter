@@ -10,11 +10,11 @@ option = input("Choose an option - 1 or 2:")
 
 if option == "1":
     C = input("Type your temperature in Celsius: ")
-    F = (int(C) * 9 / 5) + 32
+    F = (float(C) * 9 / 5) + 32
     print("Temperature: " + str(F) + "degrees Fahrenheit")
 elif option == "2":
     F = input("Type your temperature in Fahrenheit: ")
-    C = (int(F) - 32) * 5 / 9
+    C = (float(F) - 32) * 5 / 9
     print("Temperature: " + str(C) + "degrees Celsius")
 else:
     print("Invalid option !")
