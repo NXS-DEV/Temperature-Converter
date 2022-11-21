@@ -9,12 +9,21 @@ print("Option 2 - Convert from Fahrenheit to Celsius")
 option = input("Choose an option - 1 or 2:")
 
 if option == "1":
-    C = input("Type your temperature in Celsius: ")
-    F = (float(C) * 9 / 5) + 32
-    print("Temperature: " + str(F) + "degrees Fahrenheit")
+    try:
+        C = input("Type your temperature in Celsius: ")
+        F = (float(C) * 9 / 5) + 32
+        print("Temperature: " + str(F) + " degrees Fahrenheit")
+    except ValueError:
+        print("This is not an number , try again !")
 elif option == "2":
-    F = input("Type your temperature in Fahrenheit: ")
-    C = (float(F) - 32) * 5 / 9
-    print("Temperature: " + str(C) + "degrees Celsius")
+    try:
+        F = input("Type your temperature in Fahrenheit: ")
+        C = (float(F) - 32) * 5 / 9
+        print("Temperature: " + str(C) + " degrees Celsius")
+    except ValueError:
+        print("This is not an number , try again !")
+elif option != "1" and "2":
+    print("Invalid option !")
+
 else:
     print("Invalid option !")
